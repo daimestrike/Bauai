@@ -8,9 +8,6 @@ bot = telebot.TeleBot('7762731734:AAE2lTiIPZD8kz6Zd55AzIL6ie8RUg_AIJs')
 @bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    with open('C:/Users/User/OneDrive/Рабочий стол/2.png', 'rb') as photo:
-        bot.send_photo(message.from_user.id, photo, caption='Привет!', reply_markup=markup, parse_mode='Markdown')
-
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
